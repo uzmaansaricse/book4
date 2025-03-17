@@ -157,7 +157,7 @@ const connectionMongoDb = async () => {
 };
 
 // Server start
-const PORT = 9000; // Port number
+const PORT =process.env.PORT ||9000; // Port number
 app.listen(PORT, async () => {
     console.log(`App is running on http://localhost:${PORT}`);
     await connectionMongoDb(); // MongoDB connection call
